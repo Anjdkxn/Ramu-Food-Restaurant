@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Gallery</title>
+   <link rel="shorcut icon" type="text/css" href="logo.jpg">
+  <style type="text/css">
+
+      * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: #f7f7f7;
+}
+
+/* Navbar */
+.navbar {
+  width: 100%;
+  background: #ffffff;
+  padding: 15px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+/* Logo */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo img {
+  width: 45px;
+  height: 45px;
+  object-fit: contain;
+}
+
+.logo span {
+  font-size: 22px;
+  font-weight: 600;
+  color: #e63946;
+}
+
+/* Nav Links */
+.nav-links {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 30px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+  font-weight: 500;
+  position: relative;
+  transition: 0.3s;
+}
+
+/* Hover underline */
+.nav-links li a::after {
+  content: "";
+  width: 0%;
+  height: 2px;
+  background: #e63946;
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  transition: 0.3s;
+}
+
+.nav-links li a:hover::after {
+  width: 100%;
+}
+
+/* Order Button */
+.order-btn {
+  background: #e63946;
+  color: #fff !important;
+  padding: 10px 20px;
+  border-radius: 25px;
+  transition: 0.3s;
+}
+
+.order-btn:hover {
+  background: #c92c3b;
+}
+
+/* Hamburger */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.hamburger span {
+  width: 26px;
+  height: 3px;
+  background: #333;
+  margin: 4px 0;
+  border-radius: 3px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .nav-links {
+    position: absolute;
+    top: 75px;
+    right: 0;
+    width: 100%;
+    background: #ffffff;
+    flex-direction: column;
+    gap: 25px;
+    padding: 30px 0;
+    display: none;
+    box-shadow: 0 15px 25px rgba(0,0,0,0.08);
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+}
+
+
+
+    body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #ffffff;
+  color: #333;
+}
+
+/* Header */
+.gallery-header {
+  text-align: center;
+  padding: 80px 8% 40px;
+}
+
+.gallery-header h1 {
+  font-size: 38px;
+  margin-bottom: 10px;
+}
+
+.gallery-header h1 span {
+  color: #e63946;
+}
+
+.gallery-header p {
+  font-size: 16px;
+  color: #555;
+}
+
+/* Grid */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+  padding: 0 8% 80px;
+}
+
+/* Card */
+.gallery-card {
+  position: relative;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.07);
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.gallery-card:hover {
+  transform: translateY(-5px);
+}
+
+.gallery-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.gallery-card:hover img {
+  transform: scale(1.1);
+}
+
+/* Overlay Caption */
+.gallery-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.25);
+  opacity: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.3s ease;
+}
+
+.gallery-card:hover .gallery-overlay {
+  opacity: 1;
+}
+
+.gallery-overlay h3 {
+  color: #fff;
+  font-size: 16px;
+  text-align: center;
+  padding: 10px 15px;
+  background: rgba(230,57,70,0.8);
+  border-radius: 12px;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .gallery-header h1 {
+    font-size: 30px;
+  }
+}
+
+
+.footer-section {
+  background: #ffffff;
+  color: #333;
+  padding: 60px 8% 20px;
+  box-shadow: 0 -4px 25px rgba(0,0,0,0.05);
+  font-family: "Poppins", sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: space-between;
+}
+
+.footer-section h3 {
+  font-size: 24px;
+  color: #e63946;
+  margin-bottom: 15px;
+}
+
+.footer-section h4 {
+  font-size: 18px;
+  margin-bottom: 12px;
+}
+
+.footer-about p,
+.footer-contact p,
+.footer-newsletter p {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.6;
+}
+
+.footer-links ul {
+  list-style: none;
+}
+
+.footer-links ul li {
+  margin-bottom: 10px;
+}
+
+.footer-links ul li a {
+  text-decoration: none;
+  color: #333;
+  transition: 0.3s;
+}
+
+.footer-links ul li a:hover {
+  color: #e63946;
+}
+
+/* Newsletter */
+.footer-newsletter form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.footer-newsletter input {
+  flex: 1;
+  padding: 10px 15px;
+  border-radius: 25px;
+  border: 1px solid #ddd;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.footer-newsletter input:focus {
+  border-color: #e63946;
+  outline: none;
+}
+
+.footer-newsletter button {
+  padding: 10px 20px;
+  border-radius: 25px;
+  border: none;
+  background: #e63946;
+  color: #fff;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.footer-newsletter button:hover {
+  background: #c92c3b;
+}
+
+#newsletterMessage {
+  margin-top: 8px;
+  font-size: 14px;
+  color: green;
+}
+
+/* Footer bottom */
+.footer-bottom {
+  margin-top: 40px;
+  text-align: center;
+  font-size: 14px;
+  color: #777;
+  border-top: 1px solid #eee;
+  padding-top: 15px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-newsletter form {
+    flex-direction: column;
+  }
+
+  .footer-newsletter input {
+    width: 100%;
+  }
+}
+
+  </style>
+</head>
+<body>
+<nav class="navbar">
+  <div class="logo">
+    <img src="logo.png" alt="Ramu Food Restaurant">
+    <span>Ramu Food Restaurant</span>
+  </div>
+
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="menu.html">Menu</a></li>
+    <li><a href="gallery.html">Gallery</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="order.html" class="order-btn">Order Now</a></li>
+  </ul>
+
+  <div class="hamburger" id="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</nav>
+
+<section class="gallery-page">
+  <div class="gallery-header">
+    <h1>Our <span>Gallery</span></h1>
+    <p>See all our delicious dishes!</p>
+  </div>
+
+  <div class="gallery-grid" id="galleryGrid"></div>
+</section>
+
+
+<footer class="footer-section">
+  <div class="footer-container">
+    <!-- About -->
+    <div class="footer-about">
+      <h3>Ramu Food Restaurant</h3>
+      <p>
+        Delicious meals, fresh ingredients, and love in every bite.
+        Visit us or order online and experience the taste of India!
+      </p>
+    </div>
+
+    <!-- Quick Links -->
+    <div class="footer-links">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Contact Info -->
+    <div class="footer-contact">
+      <h4>Contact</h4>
+      <p>Bidhanu Society 209214, Kanpur Nagar, U.P., India</p>
+      <p>+91 9889759024</p>
+      <p>ramufoodrestaurant@gmail.com</p>
+    </div>
+
+    <!-- Newsletter -->
+    <div class="footer-newsletter">
+      <h4>Newsletter</h4>
+      <p>Subscribe for latest updates & offers!</p>
+      <form id="newsletterForm">
+        <input type="email" placeholder="Your Email" required>
+        <button type="submit">Subscribe</button>
+      </form>
+      <p id="newsletterMessage"></p>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>&copy; 2025 Ramu Food Restaurant. All rights reserved.</p>
+  </div>
+</footer>
+<script>
+  // Food items same as Menu Section
+const menuFoods = [
+  { name: "Paneer Butter Masala", img: "paneer.jpg" },
+  { name: "Veg Biryani", img: "veg.jpg" },
+  { name: "Chicken Curry", img: "curry.jpg" },
+  { name: "Butter Naan", img: "naan.webp" },
+  { name: "Masala Dosa", img: "dosa.jpg" },
+  { name: "Idli Sambhar", img: "idli.jpg" },
+  { name: "Veg Thali", img: "vegi.avif" },
+  { name: "Chicken Biryani", img: "bir.jpg" },
+  { name: "Fried Rice", img: "rice.jpg" },
+  { name: "Hakka Noodles", img: "hakka.jpg" },
+  { name: "Veg Burger", img: "burger.webp" },
+  { name: "Chicken Burger", img: "chi.webp" },
+  { name: "French Fries", img: "fri.jpg" },
+  { name: "Pizza", img: "pizza.avif" },
+  { name: "Pasta", img: "pasta.jpg" },
+  { name: "Samosa", img: "samo.webp" },
+  { name: "Chole Bhature", img: "chhole.jpg" },
+  { name: "Pav Bhaji", img: "pav.jpg" },
+  { name: "Ice Cream", img: "ice.jpg" },
+  { name: "Gulab Jamun", img: "gulab.webp" },
+  { name: "Paneer Tikka", img: "tikka.png" },
+  { name: "Veg Spring Roll", img: "spr.webp" },
+  { name: "Chicken Tikka", img: "chic.jpg" },
+  { name: "Fish Curry", img: "fish.jpg" },
+  { name: "Mutton Biryani", img: "mutton.jpg" },
+  { name: "Veg Sandwich", img: "sand.jpg" },
+  { name: "Chicken Sandwich", img: "san.webp" },
+  { name: "Chocolate Cake", img: "cake.webp" },
+  { name: "Strawberry Shake", img: "shak.jpg" },
+  { name: "Mango Lassi", img: "man.jpg" }
+];
+
+const galleryGrid = document.getElementById("galleryGrid");
+
+menuFoods.forEach(food => {
+  const card = document.createElement("div");
+  card.classList.add("gallery-card");
+  card.innerHTML = `
+    <img src="${food.img}" alt="${food.name}">
+    <div class="gallery-overlay">
+      <h3>${food.name}</h3>
+    </div>
+  `;
+  galleryGrid.appendChild(card);
+});
+
+</script>
+</body>
+</html>

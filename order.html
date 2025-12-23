@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Order Now</title>
+   <link rel="shorcut icon" type="text/css" href="logo.jpg">
+  <style type="text/css">
+
+             * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: #f7f7f7;
+}
+
+/* Navbar */
+.navbar {
+  width: 100%;
+  background: #ffffff;
+  padding: 15px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+/* Logo */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo img {
+  width: 45px;
+  height: 45px;
+  object-fit: contain;
+}
+
+.logo span {
+  font-size: 22px;
+  font-weight: 600;
+  color: #e63946;
+}
+
+/* Nav Links */
+.nav-links {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 30px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+  font-weight: 500;
+  position: relative;
+  transition: 0.3s;
+}
+
+/* Hover underline */
+.nav-links li a::after {
+  content: "";
+  width: 0%;
+  height: 2px;
+  background: #e63946;
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  transition: 0.3s;
+}
+
+.nav-links li a:hover::after {
+  width: 100%;
+}
+
+/* Order Button */
+.order-btn {
+  background: #e63946;
+  color: #fff !important;
+  padding: 10px 20px;
+  border-radius: 25px;
+  transition: 0.3s;
+}
+
+.order-btn:hover {
+  background: #c92c3b;
+}
+
+/* Hamburger */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.hamburger span {
+  width: 26px;
+  height: 3px;
+  background: #333;
+  margin: 4px 0;
+  border-radius: 3px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .nav-links {
+    position: absolute;
+    top: 75px;
+    right: 0;
+    width: 100%;
+    background: #ffffff;
+    flex-direction: column;
+    gap: 25px;
+    padding: 30px 0;
+    display: none;
+    box-shadow: 0 15px 25px rgba(0,0,0,0.08);
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+}
+
+
+    body {
+  font-family: "Poppins", sans-serif;
+  background: #ffffff;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+.order-page {
+  padding: 80px 8%;
+  text-align: center;
+}
+
+.order-page h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.order-page h1 span {
+  color: #e63946;
+}
+
+.order-page p {
+  margin-bottom: 40px;
+  color: #555;
+  font-size: 16px;
+}
+
+/* Form */
+.order-container form {
+  max-width: 500px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.form-group label {
+  margin-bottom: 6px;
+  font-weight: 500;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  padding: 12px 18px;
+  border-radius: 12px;
+  border: 1px solid #ddd;
+  font-size: 15px;
+  transition: 0.3s;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: #e63946;
+  outline: none;
+}
+
+/* Button */
+.btn-order {
+  padding: 14px 28px;
+  border-radius: 30px;
+  border: none;
+  background: #e63946;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-order:hover {
+  background: #c92c3b;
+}
+
+#orderMessage {
+  margin-top: 12px;
+  font-size: 14px;
+  color: green;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .order-page h1 {
+    font-size: 32px;
+  }
+}
+
+
+.footer-section {
+  background: #ffffff;
+  color: #333;
+  padding: 60px 8% 20px;
+  box-shadow: 0 -4px 25px rgba(0,0,0,0.05);
+  font-family: "Poppins", sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: space-between;
+}
+
+.footer-section h3 {
+  font-size: 24px;
+  color: #e63946;
+  margin-bottom: 15px;
+}
+
+.footer-section h4 {
+  font-size: 18px;
+  margin-bottom: 12px;
+}
+
+.footer-about p,
+.footer-contact p,
+.footer-newsletter p {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.6;
+}
+
+.footer-links ul {
+  list-style: none;
+}
+
+.footer-links ul li {
+  margin-bottom: 10px;
+}
+
+.footer-links ul li a {
+  text-decoration: none;
+  color: #333;
+  transition: 0.3s;
+}
+
+.footer-links ul li a:hover {
+  color: #e63946;
+}
+
+/* Newsletter */
+.footer-newsletter form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.footer-newsletter input {
+  flex: 1;
+  padding: 10px 15px;
+  border-radius: 25px;
+  border: 1px solid #ddd;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.footer-newsletter input:focus {
+  border-color: #e63946;
+  outline: none;
+}
+
+.footer-newsletter button {
+  padding: 10px 20px;
+  border-radius: 25px;
+  border: none;
+  background: #e63946;
+  color: #fff;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.footer-newsletter button:hover {
+  background: #c92c3b;
+}
+
+#newsletterMessage {
+  margin-top: 8px;
+  font-size: 14px;
+  color: green;
+}
+
+/* Footer bottom */
+.footer-bottom {
+  margin-top: 40px;
+  text-align: center;
+  font-size: 14px;
+  color: #777;
+  border-top: 1px solid #eee;
+  padding-top: 15px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-newsletter form {
+    flex-direction: column;
+  }
+
+  .footer-newsletter input {
+    width: 100%;
+  }
+}
+
+  </style>
+</head>
+<body>
+<nav class="navbar">
+  <div class="logo">
+    <img src="logo.png" alt="Ramu Food Restaurant">
+    <span>Ramu Food Restaurant</span>
+  </div>
+
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="menu.html">Menu</a></li>
+    <li><a href="gallery.html">Gallery</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="order.html" class="order-btn">Order Now</a></li>
+  </ul>
+
+  <div class="hamburger" id="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</nav>
+
+<section class="order-page">
+  <div class="order-container">
+    <h1>Place Your <span>Order</span></h1>
+    <p>Choose your favorite dishes and order online instantly!</p>
+
+    <form id="orderForm">
+      <div class="form-group">
+        <label for="foodItem">Select Dish</label>
+        <select id="foodItem" required>
+          <option value="">-- Choose a Dish --</option>
+          <option value="Paneer Butter Masala">Paneer Butter Masala</option>
+          <option value="Veg Biryani">Veg Biryani</option>
+          <option value="Chicken Curry">Chicken Curry</option>
+          <option value="Butter Naan">Butter Naan</option>
+          <option value="Masala Dosa">Masala Dosa</option>
+          <option value="Idli Sambhar">Idli Sambhar</option>
+          <option value="Veg Thali">Veg Thali</option>
+          <option value="Chicken Biryani">Chicken Biryani</option>
+          <option value="Fried Rice">Fried Rice</option>
+          <option value="Hakka Noodles">Hakka Noodles</option>
+          <option value="Veg Burger">Veg Burger</option>
+          <option value="Chicken Burger">Chicken Burger</option>
+          <option value="French Fries">French Fries</option>
+          <option value="Pizza">Pizza</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="quantity">Quantity</label>
+        <input type="number" id="quantity" min="1" value="1" required>
+      </div>
+
+      <div class="form-group">
+        <label for="name">Your Name</label>
+        <input type="text" id="name" placeholder="Ramu" required>
+      </div>
+
+      <div class="form-group">
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" placeholder="+91 9889759024" required>
+      </div>
+
+      <div class="form-group">
+        <label for="address">Delivery Address</label>
+        <textarea id="address" placeholder="Your Address" rows="3" required></textarea>
+      </div>
+
+      <button type="submit" class="btn-order">Order Now</button>
+      <p id="orderMessage"></p>
+    </form>
+  </div>
+</section>
+
+
+<footer class="footer-section">
+  <div class="footer-container">
+    <!-- About -->
+    <div class="footer-about">
+      <h3>Ramu Food Restaurant</h3>
+      <p>
+        Delicious meals, fresh ingredients, and love in every bite.
+        Visit us or order online and experience the taste of India!
+      </p>
+    </div>
+
+    <!-- Quick Links -->
+    <div class="footer-links">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Contact Info -->
+    <div class="footer-contact">
+      <h4>Contact</h4>
+      <p>Bidhanu Society 209214, Kanpur Nagar, U.P., India</p>
+      <p>+91 9889759024</p>
+      <p>ramufoodrestaurant@gmail.com</p>
+    </div>
+
+    <!-- Newsletter -->
+    <div class="footer-newsletter">
+      <h4>Newsletter</h4>
+      <p>Subscribe for latest updates & offers!</p>
+      <form id="newsletterForm">
+        <input type="email" placeholder="Your Email" required>
+        <button type="submit">Subscribe</button>
+      </form>
+      <p id="newsletterMessage"></p>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>&copy; 2025 Ramu Food Restaurant. All rights reserved.</p>
+  </div>
+</footer>
+
+
+<script>
+  const orderForm = document.getElementById("orderForm");
+const orderMessage = document.getElementById("orderMessage");
+
+orderForm.addEventListener("submit", (e) => {
+  e.preventDefault();
+
+  const foodItem = document.getElementById("foodItem").value;
+  const quantity = document.getElementById("quantity").value;
+  const name = document.getElementById("name").value;
+  const phone = document.getElementById("phone").value;
+  const address = document.getElementById("address").value;
+
+  if(foodItem && quantity && name && phone && address) {
+    orderMessage.textContent = `Thank you, ${name}! Your order of ${quantity} x ${foodItem} will be delivered to ${address}.`;
+    orderForm.reset();
+
+    setTimeout(() => {
+      orderMessage.textContent = "";
+    }, 5000);
+  }
+});
+
+</script>
+</body>
+</html>

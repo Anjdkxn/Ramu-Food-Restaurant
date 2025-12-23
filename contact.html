@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us</title>
+   <link rel="shorcut icon" type="text/css" href="logo.jpg">
+  <style type="text/css">
+
+
+          * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: #f7f7f7;
+}
+
+/* Navbar */
+.navbar {
+  width: 100%;
+  background: #ffffff;
+  padding: 15px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+/* Logo */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo img {
+  width: 45px;
+  height: 45px;
+  object-fit: contain;
+}
+
+.logo span {
+  font-size: 22px;
+  font-weight: 600;
+  color: #e63946;
+}
+
+/* Nav Links */
+.nav-links {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 30px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+  font-weight: 500;
+  position: relative;
+  transition: 0.3s;
+}
+
+/* Hover underline */
+.nav-links li a::after {
+  content: "";
+  width: 0%;
+  height: 2px;
+  background: #e63946;
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  transition: 0.3s;
+}
+
+.nav-links li a:hover::after {
+  width: 100%;
+}
+
+/* Order Button */
+.order-btn {
+  background: #e63946;
+  color: #fff !important;
+  padding: 10px 20px;
+  border-radius: 25px;
+  transition: 0.3s;
+}
+
+.order-btn:hover {
+  background: #c92c3b;
+}
+
+/* Hamburger */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.hamburger span {
+  width: 26px;
+  height: 3px;
+  background: #333;
+  margin: 4px 0;
+  border-radius: 3px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .nav-links {
+    position: absolute;
+    top: 75px;
+    right: 0;
+    width: 100%;
+    background: #ffffff;
+    flex-direction: column;
+    gap: 25px;
+    padding: 30px 0;
+    display: none;
+    box-shadow: 0 15px 25px rgba(0,0,0,0.08);
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+}
+
+    body {
+  font-family: "Poppins", sans-serif;
+  background: #ffffff;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+.contact-page {
+  padding: 90px 8%;
+}
+
+.contact-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+/* Contact Info */
+.contact-info {
+  flex: 1;
+  min-width: 300px;
+}
+
+.contact-info h1 {
+  font-size: 36px;
+}
+
+.contact-info h1 span {
+  color: #e63946;
+}
+
+.contact-info p {
+  font-size: 16px;
+  margin-bottom: 30px;
+  color: #555;
+}
+
+.contact-details .detail {
+  margin-bottom: 15px;
+  font-size: 15px;
+}
+
+.contact-details .detail strong {
+  color: #e63946;
+  display: inline-block;
+  width: 70px;
+}
+
+/* Contact Form */
+.contact-form {
+  flex: 1;
+  min-width: 300px;
+}
+
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 12px 18px;
+  border-radius: 12px;
+  border: 1px solid #ddd;
+  font-size: 15px;
+  transition: 0.3s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #e63946;
+  outline: none;
+}
+
+.btn-submit {
+  padding: 14px 28px;
+  border-radius: 25px;
+  border: none;
+  background: #e63946;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-submit:hover {
+  background: #c92c3b;
+}
+
+#formMessage {
+  margin-top: 10px;
+  font-size: 14px;
+  color: green;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .contact-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact-info, .contact-form {
+    text-align: center;
+  }
+
+  .contact-details .detail strong {
+    width: auto;
+  }
+}
+
+
+
+.footer-section {
+  background: #ffffff;
+  color: #333;
+  padding: 60px 8% 20px;
+  box-shadow: 0 -4px 25px rgba(0,0,0,0.05);
+  font-family: "Poppins", sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: space-between;
+}
+
+.footer-section h3 {
+  font-size: 24px;
+  color: #e63946;
+  margin-bottom: 15px;
+}
+
+.footer-section h4 {
+  font-size: 18px;
+  margin-bottom: 12px;
+}
+
+.footer-about p,
+.footer-contact p,
+.footer-newsletter p {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.6;
+}
+
+.footer-links ul {
+  list-style: none;
+}
+
+.footer-links ul li {
+  margin-bottom: 10px;
+}
+
+.footer-links ul li a {
+  text-decoration: none;
+  color: #333;
+  transition: 0.3s;
+}
+
+.footer-links ul li a:hover {
+  color: #e63946;
+}
+
+/* Newsletter */
+.footer-newsletter form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.footer-newsletter input {
+  flex: 1;
+  padding: 10px 15px;
+  border-radius: 25px;
+  border: 1px solid #ddd;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.footer-newsletter input:focus {
+  border-color: #e63946;
+  outline: none;
+}
+
+.footer-newsletter button {
+  padding: 10px 20px;
+  border-radius: 25px;
+  border: none;
+  background: #e63946;
+  color: #fff;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.footer-newsletter button:hover {
+  background: #c92c3b;
+}
+
+#newsletterMessage {
+  margin-top: 8px;
+  font-size: 14px;
+  color: green;
+}
+
+/* Footer bottom */
+.footer-bottom {
+  margin-top: 40px;
+  text-align: center;
+  font-size: 14px;
+  color: #777;
+  border-top: 1px solid #eee;
+  padding-top: 15px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-newsletter form {
+    flex-direction: column;
+  }
+
+  .footer-newsletter input {
+    width: 100%;
+  }
+}
+
+  </style>
+</head>
+<body>
+<nav class="navbar">
+  <div class="logo">
+    <img src="logo.png" alt="Ramu Food Restaurant">
+    <span>Ramu Food Restaurant</span>
+  </div>
+
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="menu.html">Menu</a></li>
+    <li><a href="gallery.html">Gallery</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="order.html" class="order-btn">Order Now</a></li>
+  </ul>
+
+  <div class="hamburger" id="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</nav>
+
+
+<section class="contact-page">
+  <div class="contact-container">
+    <!-- Contact Info -->
+    <div class="contact-info">
+      <h1>Contact <span>Us</span></h1>
+      <p>Have a question or want to place an order? Reach out to us, and we’ll get back to you quickly!</p>
+
+      <div class="contact-details">
+        <div class="detail">
+          <strong>Address:</strong>
+          <span>Bidhanu Society 209214, Kanpur Nagar, U.P., India</span>
+        </div>
+        <div class="detail">
+          <strong>Phone:</strong>
+          <span>+91 9889759024</span>
+        </div>
+        <div class="detail">
+          <strong>Email:</strong>
+          <span>ramufoodrestaurant@gmail.com</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Contact Form -->
+    <div class="contact-form">
+      <form id="contactForm">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <input type="text" name="subject" placeholder="Subject" required>
+        <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+        <button type="submit" class="btn-submit">Send Message</button>
+        <p id="formMessage"></p>
+      </form>
+    </div>
+  </div>
+</section>
+<footer class="footer-section">
+  <div class="footer-container">
+    <!-- About -->
+    <div class="footer-about">
+      <h3>Ramu Food Restaurant</h3>
+      <p>
+        Delicious meals, fresh ingredients, and love in every bite.
+        Visit us or order online and experience the taste of India!
+      </p>
+    </div>
+
+    <!-- Quick Links -->
+    <div class="footer-links">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Contact Info -->
+    <div class="footer-contact">
+      <h4>Contact</h4>
+      <p>Bidhanu Society 209214, Kanpur Nagar, U.P., India</p>
+      <p>+91 9889759024</p>
+      <p>ramufoodrestaurant@gmail.com</p>
+    </div>
+
+    <!-- Newsletter -->
+    <div class="footer-newsletter">
+      <h4>Newsletter</h4>
+      <p>Subscribe for latest updates & offers!</p>
+      <form id="newsletterForm">
+        <input type="email" placeholder="Your Email" required>
+        <button type="submit">Subscribe</button>
+      </form>
+      <p id="newsletterMessage"></p>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>&copy; 2025 Ramu Food Restaurant. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+  const contactForm = document.getElementById("contactForm");
+const formMessage = document.getElementById("formMessage");
+
+contactForm.addEventListener("submit", (e) => {
+  e.preventDefault();
+
+  const name = contactForm.name.value;
+  const email = contactForm.email.value;
+  const subject = contactForm.subject.value;
+  const message = contactForm.message.value;
+
+  if(name && email && subject && message) {
+    formMessage.textContent = `Thank you, ${name}! Your message has been sent.`;
+    contactForm.reset();
+
+    setTimeout(() => {
+      formMessage.textContent = "";
+    }, 5000);
+  }
+});
+
+</script>
+</body>
+</html>
